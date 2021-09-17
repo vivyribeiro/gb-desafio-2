@@ -1,0 +1,175 @@
+/*====  RESET ============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+ul {
+    list-style: none;
+}
+  
+a {
+    text-decoration: none;
+    /*color: var(--secondary-text-color);*/
+}
+
+i{
+    /*color: var(--primary-text-color);*/
+    font-size: 1.75rem;
+}
+
+
+
+ /*===  BASE ============================ */
+ html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #1f3d89;
+    /*font: var(--subtitle-font-size) var(--body-font);*/
+}
+
+ /*.title{
+
+   font: 700 var(--title-font-size) var(--title-font);
+}*/
+
+h1, p{
+    margin-top: 3rem;
+}
+
+h1{
+    font-size: 6rem;
+    
+}
+
+p{
+    font-size: 4rem;
+}
+
+/*====  LAYOUT ============================ */
+.section{
+    display: flex;
+    justify-content: center;
+    padding: 8rem;
+    
+}
+
+.divider{
+    border-bottom: .5rem solid #1f3d89;
+    width: 60%;
+    
+}
+
+/*====  SECTION FORM ============================ */
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    width: 80%;
+    background-color: white;
+    justify-content: flex-start;
+    align-content: center;
+    text-align: center;
+    padding: 1rem;
+    border: 1.5rem solid #84abfe;
+}
+
+
+.image-block img{
+    width: 100%;
+}
+
+.form-block,
+.table-block{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 0 8rem;
+}
+
+.form-header,
+.table-header{
+    text-align: -webkit-center;
+}
+
+/* h1, p{
+    margin-top: 3rem;
+    
+}
+
+.form-header h1{
+    font-size: 6rem;
+    
+}
+
+.form-header p{
+    font-size: 4rem;
+}*/
+
+#form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    gap: 3rem;
+    /*width: 90%;
+    padding: 0 5rem;*/ 
+    align-items: center;
+}
+
+ input[type="text"],
+ input[type="number"],
+ input[type="submit"],
+ input[type="button"]{
+    width: 90%;
+    height: 8rem;
+    font-size: 4rem;
+    text-align: center;
+    border: .25rem solid #1f3d89;
+     /*align-self: center;*/
+}
+
+.form-cta {
+    display: flex;
+    gap: 2rem;
+    width: 90%;
+}
+
+.form-cta  input[type="submit"],
+.form-cta input[type="button"]{
+    width: 100%;
+    color: white;
+    background-color: #1f3d89;
+    padding: 0 2rem;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover{
+    background-color: #84abfe;
+}    
+
+
+/*====  SECTION TABLE ============================ */
+table{
+    margin-top: 4rem;
+    border-collapse: collapse;
+}
+
+
+.table-title th{
+    font-size: 4rem;
+    background-color:  #1f3d89;
+    color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    border-right: solid;
+    text-align: center;
+}
+
+.table-data td{
+    font-size: 2rem;
+    padding: 1.25rem;
+    border-right: .25rem solid #1f3d89;
+}

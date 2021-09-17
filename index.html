@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" />
+    <title>Gobeyond Desafio 2#</title>
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fonts -->
+
+</head>
+<body>
+    <main>
+        <section class="section">
+            <div class="container" >
+                <div class="image-block">
+                    <picture>
+                        <source media="(max-width:545px)" srcset="assets/calculate.jpg" type="image/jpg">
+                        <img src="assets/calculate.jpg" alt="Formulário" type="image/jpg" >
+                    </picture>
+                </div>
+                <div class="form-block">
+                    <header class="form-header">
+                        <h1 > Finan - Relatório Financeiro</h1>
+                        <div class="divider"></div>
+                        <p>Sua calculadora de remuneração em alguns clicks. Basta inserir os dados e fazemos todo o resto para você!</p>
+                    </header>
+                    <form id="form" class="form-inputs" autocomplete="off">
+                        <input type="text" id="name" placeholder="Digite o nome do funcionário"  required>
+                        <input type="number" id="salary" placeholder="Informe o sálario fixo" min="0" step="25" required>
+                        <input type="number" id="sales" placeholder="Informe o total de vendas feitas" min="0" step="25" required>
+                        <div class="form-cta">
+                            <input type="submit" value="Salvar" onclick="listEmployees()">
+                             
+                        </div>
+                    </form>
+                    <div id="content-form"></div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="image-block">
+                    <picture>
+                        <source media="(max-width:545px)" srcset="/assets/list_employees.jpg" type="image/jpg">
+                        <img src="/assets/list_employees.jpg" alt="Relatório" type="image/jpg" >
+                    </picture>
+                </div>
+                <div class="table-block">
+                    <header class="table-header">
+                        <h1 >Relatório Financeiro</h1>
+                        <div class="divider"></div>
+                    </header>
+                    <table>
+                        <tr class="table-title">
+                            <th>Nome do Funcionário</th>
+                            <th>Sálario</th>
+                            <th>Comissão</th>
+                            <th>Remuneração</th>
+                        </tr>
+                        <tr id="table-data" >
+
+                        </tr>
+                    </table>
+                    <div id="content-table"></div>
+                </div>    
+            </div>
+        </section>
+    </main>
+    <!-- script.js -->
+    <script src="script.js"></script>
+</body>
+</html>

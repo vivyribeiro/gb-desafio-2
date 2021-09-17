@@ -53,7 +53,7 @@ p{
 .section{
     display: flex;
     justify-content: center;
-    padding: 4rem;
+    padding: 8rem;
     
 }
 
@@ -99,20 +99,6 @@ p{
 .table-header{
     text-align: -webkit-center;
 }
-
-/* h1, p{
-    margin-top: 3rem;
-    
-}
-
-.form-header h1{
-    font-size: 6rem;
-    
-}
-
-.form-header p{
-    font-size: 4rem;
-}*/
 
 #form{
     display: flex;

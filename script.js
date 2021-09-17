@@ -42,17 +42,17 @@ function cleanField() {
 function listEmployees() {
 
     if (typeof(Storage) !== "undefined") {
-        let vendor = localStorage.getItem("employees");
+        let employees = localStorage.getItem("employees");
 
-        employees = JSON.parse(vendor)
-            vendor.forEach(employees => {
+        employees = JSON.parse(employees)
+            employees.forEach(employee => {
                 
                 let dataTable = document.querySelector("#table-data") 
                 let tableList = ` 
-                                  <td>${employees.name }</td>
-                                  <td>${employees.salary}</td>
-                                  <td>${employees.sales}</td>
-                                  <td>${employees.payment}</td>
+                                  <td>${employee.name }</td>
+                                  <td>${employee.salary}</td>
+                                  <td>${employee.sales}</td>
+                                  <td>${employee.payment}</td>
                 `
                 dataTable.innerHTML += tableList;
 

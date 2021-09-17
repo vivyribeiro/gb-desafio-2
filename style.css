@@ -41,19 +41,19 @@ h1, p{
 }
 
 h1{
-    font-size: 6rem;
+    font-size: 2.5rem;
     
 }
 
 p{
-    font-size: 4rem;
+    font-size: 1.5rem;
 }
 
 /*====  LAYOUT ============================ */
 .section{
     display: flex;
     justify-content: center;
-    padding: 8rem;
+    padding: 4rem;
     
 }
 
@@ -68,7 +68,7 @@ p{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    width: 80%;
+
     background-color: white;
     justify-content: flex-start;
     align-content: center;
@@ -77,17 +77,22 @@ p{
     border: 1.5rem solid #84abfe;
 }
 
+.image-block{
+    display: flex;
+    align-items: center;
+}
 
 .image-block img{
     width: 100%;
+    align-items: center;
 }
 
 .form-block,
 .table-block{
     display: flex;
     flex-direction: column;
-    gap: 4rem;
-    padding: 0 8rem;
+    gap: 2rem;
+ 
 }
 
 .form-header,
@@ -112,8 +117,8 @@ p{
 #form{
     display: flex;
     flex-direction: column;
-    margin-top: 4rem;
-    gap: 3rem;
+    margin-top: 1.5rem;
+    gap: 2rem;
     /*width: 90%;
     padding: 0 5rem;*/ 
     align-items: center;
@@ -124,8 +129,8 @@ p{
  input[type="submit"],
  input[type="button"]{
     width: 90%;
-    height: 8rem;
-    font-size: 4rem;
+    height: 3rem;
+    font-size: 1.5rem;
     text-align: center;
     border: .25rem solid #1f3d89;
      /*align-self: center;*/
@@ -159,17 +164,17 @@ table{
 
 
 .table-title th{
-    font-size: 4rem;
+    font-size: 1.5rem;
     background-color:  #1f3d89;
     color: white;
-    padding: 2rem;
+    padding: .5rem;
     border-radius: 1rem;
     border-right: solid;
     text-align: center;
 }
 
 .table-data td{
-    font-size: 2rem;
-    padding: 1.25rem;
+    font-size: 1rem;
+    padding: .25rem;
     border-right: .25rem solid #1f3d89;
 }

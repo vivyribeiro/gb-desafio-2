@@ -1,67 +1,58 @@
 
 
-const form = document.getElementById('form')
-    form.addEventListener('submit', (e) =>{
-        e.preventDefault();
-        let name = document.getElementById('name').value;        
-        let salary = document.getElementById('salary').value;
-	    let sales = document.getElementById('sales').value;
-        let totalComission = sales * 0.15;
-        let payment = salary + totalComission;
+const form = document.getElementById("form");
+form.addEventListener("submit", e => {
+	e.preventDefault();
 
-        let employees = {
-            name,
-            salary,
-	        sales,
-            payment
-        }
-        let convertData = JSON.stringify(employees);
-        localStorage.setItem('employee', convertData)
+	let employeeData = JSON.parse(localStorage.getItem("employee")) || [];
 
-        let contentForm = document.getElementById('content-form')
-        let carregando = `<p>Carregando...</p>`
-        let pronto = `<p>Cadastrado com sucesso!</p>`
+	let name = document.getElementById("name").value;
+	let salary = parseFloat(document.getElementById("salary").value);
+	let sales = parseFloat(document.getElementById("sales").value);
+	let totalComission = sales * 0.15;
+	let payment = salary + totalComission;
 
-        contentForm.innerHTML = carregando;
-        setTimeout(() => {
-            contentForm.innerHTML = pronto;
-        },1000 )
+	employeeData.push({
+		vendorName: name,
+		vendorSalary: salary.toFixed(2),
+		vendorComission: totalComission.toFixed(2),
+		vendorPayment: payment.toFixed(2)
+	});
 
-        cleanField()
-        listEmployees()
-        
-    })
+	localStorage.setItem("employee", JSON.stringify(employeeData));
 
-function cleanField() {
-      document.querySelector('#name').value = "";
-      document.querySelector('#salary').value = "";
-      document.querySelector('#sales').value = "";
-      document.querySelector('#content-form').value = ""; 
-} 
+	listEmployees();
+
+	let contentForm = document.getElementById("content-form");
+	let save = `<p>Dados salvos com sucesso!</p>`;
+	let clearMessage = "";
+	contentForm.innerHTML = save;
+
+	setTimeout(() => {
+		contentForm.innerHTML = clearMessage;
+	}, 3000);
+
+	form.reset();
+});
 
 function listEmployees() {
+	// Add Participant Data on Table
+	if (typeof Storage !== "undefined" || typeof Storage !== "") {
+		let showEmployeeData = JSON.parse(localStorage.getItem("employee"));
 
-    if (typeof(Storage) !== "undefined") {
-        let employees = localStorage.getItem("employees");
+		let dataTable = document.querySelector("#table-data");
 
-        employees = JSON.parse(employees)
-            employees.forEach(employee => {
-                
-                let dataTable = document.querySelector("#table-data") 
-                let tableList = ` 
-                                  <td>${employee.name }</td>
-                                  <td>${employee.salary}</td>
-                                  <td>${employee.sales}</td>
-                                  <td>${employee.payment}</td>
-                `
-                dataTable.innerHTML += tableList;
+		dataTable.innerHTML = "";
 
-            })
-
-       } 
-        else {
-            alert("Não há funcionarios cadastrados!")
-        }
-      
-} 
- 
+		showEmployeeData.forEach(employee => {
+			dataTable.innerHTML += `
+	 		<tr>
+			 <td>${employee.vendorName}</td>
+			 <td>${employee.vendorSalary}</td>
+			 <td>${employee.vendorComission}</td>
+			 <td>${employee.vendorPayment}</td>
+	 		</tr>
+	 	`;
+		});
+	}
+}

@@ -1,166 +1,154 @@
 /*====  RESET ============================ */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-  
+
 ul {
-    list-style: none;
+	list-style: none;
 }
-  
+
 a {
-    text-decoration: none;
-    /*color: var(--secondary-text-color);*/
+	text-decoration: none;
 }
 
-i{
-    /*color: var(--primary-text-color);*/
-    font-size: 1.75rem;
+i {
+	/*color: var(--primary-text-color);*/
+	font-size: 1.75rem;
 }
 
-
-
- /*===  BASE ============================ */
- html {
-    scroll-behavior: smooth;
+/*===  BASE ============================ */
+html {
+	scroll-behavior: smooth;
 }
 
-body{
-    background-color: #1f3d89;
-    /*font: var(--subtitle-font-size) var(--body-font);*/
+body {
+	background-color: #1f3d89;
 }
 
- /*.title{
-
-   font: 700 var(--title-font-size) var(--title-font);
-}*/
-
-h1, p{
-    margin-top: 3rem;
+h1,
+p {
+	margin-top: 3rem;
 }
 
-h1{
-    font-size: 2.5rem;
-    
+h1 {
+	font-size: 2.5rem;
 }
 
-p{
-    font-size: 1.5rem;
+p {
+	font-size: 1.5rem;
 }
 
 /*====  LAYOUT ============================ */
-.section{
-    display: flex;
-    justify-content: center;
-    padding: 8rem;
-    
+.section {
+	display: flex;
+	justify-content: center;
+	padding: 4rem;
 }
 
-.divider{
-    border-bottom: .5rem solid #1f3d89;
-    width: 60%;
-    
+.divider {
+	border-bottom: 0.25rem solid #1f3d89;
+	width: 72%;
 }
 
 /*====  SECTION FORM ============================ */
-.container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-
-    background-color: white;
-    justify-content: flex-start;
-    align-content: center;
-    text-align: center;
-    padding: 1rem;
-    border: 1.5rem solid #84abfe;
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	background-color: white;
+	justify-content: start;
+	align-content: center;
+	text-align: center;
+	padding: 1rem;
+	border: 1.5rem solid #84abfe;
+	max-width: 920px;
 }
 
-.image-block{
-    display: flex;
-    align-items: center;
+.image-block {
+	display: flex;
+	align-items: center;
 }
 
-.image-block img{
-    width: 100%;
-    align-items: center;
+.image-block img {
+	width: 100%;
+	align-items: center;
 }
 
 .form-block,
-.table-block{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
- 
+.table-block {
+	display: flex;
+	flex-direction: column;
 }
 
 .form-header,
-.table-header{
-    text-align: -webkit-center;
+.table-header {
+	text-align: -webkit-center;
 }
 
-#form{
-    display: flex;
-    flex-direction: column;
-    margin-top: 1.5rem;
-    gap: 2rem;
-    /*width: 90%;
-    padding: 0 5rem;*/ 
-    align-items: center;
+#form {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1.5rem;
+	gap: 2rem;
+	align-items: center;
 }
 
- input[type="text"],
- input[type="number"],
- input[type="submit"],
- input[type="button"]{
-    width: 90%;
-    height: 3rem;
-    font-size: 1.5rem;
-    text-align: center;
-    border: .25rem solid #1f3d89;
-     /*align-self: center;*/
+input[type="text"],
+input[type="number"],
+input[type="submit"] {
+	width: 90%;
+	height: 3rem;
+	font-size: 1.5rem;
+	text-align: center;
+	border: 0.25rem solid #1f3d89;
+
 }
 
 .form-cta {
-    display: flex;
-    gap: 2rem;
-    width: 90%;
+	display: flex;
+	gap: 2rem;
+	width: 90%;
 }
 
-.form-cta  input[type="submit"],
-.form-cta input[type="button"]{
-    width: 100%;
-    color: white;
-    background-color: #1f3d89;
-    padding: 0 2rem;
+.form-cta button {
+	width: 100%;
+	color: white;
+	background-color: #1f3d89;
+	height: 3rem;
+	font-size: 1.5rem;
 }
 
-input[type="submit"]:hover,
-input[type="button"]:hover{
-    background-color: #84abfe;
-}    
+.form-cta button:hover {
+	background-color: #84abfe;
+}
 
+.form-cta a {
+	color: white;
+}
+
+#content-form p {
+	margin-top: 0;
+}
 
 /*====  SECTION TABLE ============================ */
-table{
-    margin-top: 4rem;
-    border-collapse: collapse;
+table {
+	margin-top: 4rem;
+	border-collapse: collapse;
 }
 
-
-.table-title th{
-    font-size: 1.5rem;
-    background-color:  #1f3d89;
-    color: white;
-    padding: .5rem;
-    border-radius: 1rem;
-    border-right: solid;
-    text-align: center;
+.table-title th {
+	font-size: 1.5rem;
+	background-color: #1f3d89;
+	color: white;
+	padding: 0.5rem;
+	border: 1px solid white;
+	text-align: center;
 }
 
-.table-data td{
-    font-size: 1rem;
-    padding: .25rem;
-    border-right: .25rem solid #1f3d89;
+#table-data td {
+	font-size: 1.5rem;
+	padding: 1rem;
+	border: 1px solid #1f3d89;
 }

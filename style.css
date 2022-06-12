@@ -9,6 +9,10 @@ ul {
 	list-style: none;
 }
 
+button {
+	border: none;
+}
+
 a {
 	text-decoration: none;
 }
@@ -25,6 +29,7 @@ html {
 
 body {
 	background-color: #1f3d89;
+	font-family: sans-serif;
 }
 
 h1,
@@ -34,6 +39,8 @@ p {
 
 h1 {
 	font-size: 2.5rem;
+	border-bottom: 0.25rem solid #1f3d89;
+	width: fit-content;
 }
 
 p {
@@ -45,11 +52,6 @@ p {
 	display: flex;
 	justify-content: center;
 	padding: 4rem;
-}
-
-.divider {
-	border-bottom: 0.25rem solid #1f3d89;
-	width: 72%;
 }
 
 /*====  SECTION FORM ============================ */
@@ -103,16 +105,17 @@ input[type="submit"] {
 	font-size: 1.5rem;
 	text-align: center;
 	border: 0.25rem solid #1f3d89;
-
 }
 
 .form-cta {
 	display: flex;
+	flex-direction: column;
 	gap: 2rem;
 	width: 90%;
 }
 
-.form-cta button {
+.form-cta button,
+.form-cta a {
 	width: 100%;
 	color: white;
 	background-color: #1f3d89;
@@ -120,12 +123,14 @@ input[type="submit"] {
 	font-size: 1.5rem;
 }
 
-.form-cta button:hover {
+.form-cta button:hover,
+.form-cta a:hover {
 	background-color: #84abfe;
 }
 
 .form-cta a {
-	color: white;
+	text-align: center;
+	padding: 0.5rem 0;
 }
 
 #content-form p {
